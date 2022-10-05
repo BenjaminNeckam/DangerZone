@@ -11,14 +11,14 @@ export function LandingPage () {
             <Grid item xxs={12}>
                 <img src={dangerZone} alt="Logo" style={{maxWidth: "100%"}}/>
             </Grid>
-            <Grid item xxs={12} style={{marginBottom: "10%"}}>
-                <Typography variant="body1">
+            <Grid item xxs={12} style={{marginBottom: "10%", alignItems: "center"}}>
+                <Typography variant="body1" textAlign="center">
                     Adrenalin ist dein zweiter Vorname?
-
+<br/><br/>
                     Von bungee jumping bis Zebra Rodeo schon alles mal getestet?
-
+                    <br/>
                     Dann ist es Zeit für den nächsten Schritt!
-
+                    <br/><br/>
                     Willkommen bei Danger Zone - Abenteuer mit finalem Kick!
                 </Typography>
             </Grid>
