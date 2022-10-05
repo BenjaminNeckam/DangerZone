@@ -14,8 +14,8 @@ export function LandingPage () {
             <Grid item xxs={12} style={{marginBottom: "10%", alignItems: "center"}}>
                 <Typography variant="body1" textAlign="center">
                     Adrenalin ist dein zweiter Vorname?
-<br/><br/>
-                    Von bungee jumping bis Zebra Rodeo schon alles mal getestet?
+<br/>
+                    Von Bungee Jumping bis Zebra Rodeo schon alles mal getestet?
                     <br/>
                     Dann ist es Zeit für den nächsten Schritt!
                     <br/><br/>
