@@ -1,9 +1,14 @@
 import {LandingPage} from "./container/landingPage/LandingPage";
+import NavBar from "./components/NavBar/NavBar";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
+        <NavBar/>
+        <div style={{margin: "1rem"}}>
+            <LandingPage/>
+        </div>
     </div>
   );
 }
