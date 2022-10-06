@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 export function LandingPage () {
     return(
         <Grid container spacing={2}>
+            <NavBar title="Danger Zone"/>
             <Grid item xxs={12}>
                 <img src={dangerZone} alt="Logo" style={{maxWidth: "100%"}}/>
             </Grid>
