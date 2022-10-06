@@ -1,0 +1,542 @@
+Index: frontend-danger-zone/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"name\": \"frontend-danger-zone\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"@emotion/react\": \"^11.10.4\",\n    \"@emotion/styled\": \"^11.10.4\",\n    \"@mui/icons-material\": \"^5.10.6\",\n    \"@mui/material\": \"^5.10.8\",\n    \"@mui/styled-engine-sc\": \"^5.10.6\",\n    \"@testing-library/jest-dom\": \"^5.16.5\",\n    \"@testing-library/react\": \"^13.4.0\",\n    \"@testing-library/user-event\": \"^13.5.0\",\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-scripts\": \"5.0.1\",\n    \"styled-components\": \"^5.3.6\",\n    \"web-vitals\": \"^2.1.4\"\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend-danger-zone/package.json b/frontend-danger-zone/package.json
+--- a/frontend-danger-zone/package.json	(revision 825a6bdcb5dcc908573fef6eb85bc6cc0e4e15eb)
++++ b/frontend-danger-zone/package.json	(date 1665045925946)
+@@ -11,8 +11,10 @@
+     "@testing-library/jest-dom": "^5.16.5",
+     "@testing-library/react": "^13.4.0",
+     "@testing-library/user-event": "^13.5.0",
++    "hash-router": "^0.4.0",
+     "react": "^18.2.0",
+     "react-dom": "^18.2.0",
++    "react-router-dom": "^6.4.2",
+     "react-scripts": "5.0.1",
+     "styled-components": "^5.3.6",
+     "web-vitals": "^2.1.4"
+Index: frontend-danger-zone/src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {LandingPage} from \"./container/landingPage/LandingPage\";\nimport NavBar from \"./components/NavBar/NavBar\";\nimport React from \"react\";\n\nfunction App() {\n  return (\n    <div className=\"App\">\n        <NavBar/>\n        <div style={{margin: \"1rem\"}}>\n            <LandingPage/>\n        </div>\n    </div>\n  );\n}\n\nexport default App;\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend-danger-zone/src/App.js b/frontend-danger-zone/src/App.js
+--- a/frontend-danger-zone/src/App.js	(revision 825a6bdcb5dcc908573fef6eb85bc6cc0e4e15eb)
++++ b/frontend-danger-zone/src/App.js	(date 1665046108286)
+@@ -1,15 +1,18 @@
+ import {LandingPage} from "./container/landingPage/LandingPage";
+ import NavBar from "./components/NavBar/NavBar";
+ import React from "react";
++import { HashRouter, Route, Routes } from 'react-router-dom';
++import {routes} from "./routes/routes";
+ 
+ function App() {
+   return (
+-    <div className="App">
+-        <NavBar/>
+-        <div style={{margin: "1rem"}}>
+-            <LandingPage/>
+-        </div>
+-    </div>
++      <HashRouter>
++          <Routes>
++              {routes.map((route, i) => (
++                  <Route key={i} {...route} />
++              ))}
++          </Routes>
++      </HashRouter>
+   );
+ }
+ 
+Index: frontend-danger-zone/package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend-danger-zone/package-lock.json b/frontend-danger-zone/package-lock.json
+--- a/frontend-danger-zone/package-lock.json	(revision 825a6bdcb5dcc908573fef6eb85bc6cc0e4e15eb)
++++ b/frontend-danger-zone/package-lock.json	(date 1665045925945)
+@@ -16,8 +16,10 @@
+         "@testing-library/jest-dom": "^5.16.5",
+         "@testing-library/react": "^13.4.0",
+         "@testing-library/user-event": "^13.5.0",
++        "hash-router": "^0.4.0",
+         "react": "^18.2.0",
+         "react-dom": "^18.2.0",
++        "react-router-dom": "^6.4.2",
+         "react-scripts": "5.0.1",
+         "styled-components": "^5.3.6",
+         "web-vitals": "^2.1.4"
+@@ -3562,6 +3564,14 @@
+         "url": "https://opencollective.com/popperjs"
+       }
+     },
++    "node_modules/@remix-run/router": {
++      "version": "1.0.2",
++      "resolved": "https://registry.npmjs.org/@remix-run/router/-/router-1.0.2.tgz",
++      "integrity": "sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ==",
++      "engines": {
++        "node": ">=14"
++      }
++    },
+     "node_modules/@rollup/plugin-babel": {
+       "version": "5.3.1",
+       "resolved": "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz",
+@@ -7110,6 +7120,11 @@
+         "url": "https://github.com/cheeriojs/dom-serializer?sponsor=1"
+       }
+     },
++    "node_modules/dom-walk": {
++      "version": "0.1.2",
++      "resolved": "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.2.tgz",
++      "integrity": "sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w=="
++    },
+     "node_modules/domelementtype": {
+       "version": "2.3.0",
+       "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz",
+@@ -8518,6 +8533,11 @@
+         }
+       }
+     },
++    "node_modules/foreach": {
++      "version": "2.0.6",
++      "resolved": "https://registry.npmjs.org/foreach/-/foreach-2.0.6.tgz",
++      "integrity": "sha512-k6GAGDyqLe9JaebCsFCoudPPWfihKu8pylYXRlqP1J7ms39iPoTtk2fviNglIeQEwdh0bQeKJ01ZPyuyQvKzwg=="
++    },
+     "node_modules/fork-ts-checker-webpack-plugin": {
+       "version": "6.5.2",
+       "resolved": "https://registry.npmjs.org/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.5.2.tgz",
+@@ -8884,6 +8904,15 @@
+       "resolved": "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz",
+       "integrity": "sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw=="
+     },
++    "node_modules/global": {
++      "version": "4.4.0",
++      "resolved": "https://registry.npmjs.org/global/-/global-4.4.0.tgz",
++      "integrity": "sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==",
++      "dependencies": {
++        "min-document": "^2.19.0",
++        "process": "^0.11.10"
++      }
++    },
+     "node_modules/global-modules": {
+       "version": "2.0.0",
+       "resolved": "https://registry.npmjs.org/global-modules/-/global-modules-2.0.0.tgz",
+@@ -9043,6 +9072,39 @@
+         "url": "https://github.com/sponsors/ljharb"
+       }
+     },
++    "node_modules/hash-router": {
++      "version": "0.4.0",
++      "resolved": "https://registry.npmjs.org/hash-router/-/hash-router-0.4.0.tgz",
++      "integrity": "sha512-TWIwsxInId58YR3HeGhwIK/APKc5immhVCc2aPD8j7o368exRmKulcwaF1w6Yd6cnMIBDS7LCz4imfaIeYKTew==",
++      "dependencies": {
++        "global": "^4.2.1",
++        "routes": "~0.2.0",
++        "xtend": "~2.0.6"
++      }
++    },
++    "node_modules/hash-router/node_modules/object-keys": {
++      "version": "0.2.0",
++      "resolved": "https://registry.npmjs.org/object-keys/-/object-keys-0.2.0.tgz",
++      "integrity": "sha512-XODjdR2pBh/1qrjPcbSeSgEtKbYo7LqYNq64/TPuCf7j9SfDD3i21yatKoIy39yIWNvVM59iutfQQpCv1RfFzA==",
++      "deprecated": "Please update to the latest object-keys",
++      "dependencies": {
++        "foreach": "~2.0.1",
++        "indexof": "~0.0.1",
++        "is": "~0.2.6"
++      }
++    },
++    "node_modules/hash-router/node_modules/xtend": {
++      "version": "2.0.6",
++      "resolved": "https://registry.npmjs.org/xtend/-/xtend-2.0.6.tgz",
++      "integrity": "sha512-fOZg4ECOlrMl+A6Msr7EIFcON1L26mb4NY5rurSkOex/TWhazOrg6eXD/B0XkuiYcYhQDWLXzQxLMVJ7LXwokg==",
++      "dependencies": {
++        "is-object": "~0.1.2",
++        "object-keys": "~0.2.0"
++      },
++      "engines": {
++        "node": ">=0.4"
++      }
++    },
+     "node_modules/he": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/he/-/he-1.2.0.tgz",
+@@ -9392,6 +9454,11 @@
+         "node": ">=8"
+       }
+     },
++    "node_modules/indexof": {
++      "version": "0.0.1",
++      "resolved": "https://registry.npmjs.org/indexof/-/indexof-0.0.1.tgz",
++      "integrity": "sha512-i0G7hLJ1z0DE8dsqJa2rycj9dBmNKgXBvotXtZYXakU9oivfB9Uj2ZBC27qqef2U58/ZLwalxa1X/RDCdkHtVg=="
++    },
+     "node_modules/inflight": {
+       "version": "1.0.6",
+       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+@@ -9432,6 +9499,14 @@
+         "node": ">= 10"
+       }
+     },
++    "node_modules/is": {
++      "version": "0.2.7",
++      "resolved": "https://registry.npmjs.org/is/-/is-0.2.7.tgz",
++      "integrity": "sha512-ajQCouIvkcSnl2iRdK70Jug9mohIHVX9uKpoWnl115ov0R5mzBvRrXxrnHbsA+8AdwCwc/sfw7HXmd4I5EJBdQ==",
++      "engines": {
++        "node": "*"
++      }
++    },
+     "node_modules/is-arrayish": {
+       "version": "0.2.1",
+       "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
+@@ -9605,6 +9680,11 @@
+         "node": ">=0.10.0"
+       }
+     },
++    "node_modules/is-object": {
++      "version": "0.1.2",
++      "resolved": "https://registry.npmjs.org/is-object/-/is-object-0.1.2.tgz",
++      "integrity": "sha512-GkfZZlIZtpkFrqyAXPQSRBMsaHAw+CgoKe2HXAkjd/sfoI9+hS8PT4wg2rJxdQyUKr7N2vHJbg7/jQtE5l5vBQ=="
++    },
+     "node_modules/is-plain-obj": {
+       "version": "3.0.0",
+       "resolved": "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-3.0.0.tgz",
+@@ -12244,6 +12324,14 @@
+         "node": ">=6"
+       }
+     },
++    "node_modules/min-document": {
++      "version": "2.19.0",
++      "resolved": "https://registry.npmjs.org/min-document/-/min-document-2.19.0.tgz",
++      "integrity": "sha512-9Wy1B3m3f66bPPmU5hdA4DR4PB2OfDU/+GS3yAB7IQozE3tqXaVv2zOjgla7MEGSRv95+ILmOuvhLkOK6wJtCQ==",
++      "dependencies": {
++        "dom-walk": "^0.1.0"
++      }
++    },
+     "node_modules/min-indent": {
+       "version": "1.0.1",
+       "resolved": "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz",
+@@ -14207,6 +14295,14 @@
+         "url": "https://github.com/chalk/ansi-styles?sponsor=1"
+       }
+     },
++    "node_modules/process": {
++      "version": "0.11.10",
++      "resolved": "https://registry.npmjs.org/process/-/process-0.11.10.tgz",
++      "integrity": "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==",
++      "engines": {
++        "node": ">= 0.6.0"
++      }
++    },
+     "node_modules/process-nextick-args": {
+       "version": "2.0.1",
+       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+@@ -14569,6 +14665,36 @@
+         "node": ">=0.10.0"
+       }
+     },
++    "node_modules/react-router": {
++      "version": "6.4.2",
++      "resolved": "https://registry.npmjs.org/react-router/-/react-router-6.4.2.tgz",
++      "integrity": "sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==",
++      "dependencies": {
++        "@remix-run/router": "1.0.2"
++      },
++      "engines": {
++        "node": ">=14"
++      },
++      "peerDependencies": {
++        "react": ">=16.8"
++      }
++    },
++    "node_modules/react-router-dom": {
++      "version": "6.4.2",
++      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.2.tgz",
++      "integrity": "sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==",
++      "dependencies": {
++        "@remix-run/router": "1.0.2",
++        "react-router": "6.4.2"
++      },
++      "engines": {
++        "node": ">=14"
++      },
++      "peerDependencies": {
++        "react": ">=16.8",
++        "react-dom": ">=16.8"
++      }
++    },
+     "node_modules/react-scripts": {
+       "version": "5.0.1",
+       "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-5.0.1.tgz",
+@@ -15062,6 +15188,14 @@
+         "node": ">=8"
+       }
+     },
++    "node_modules/routes": {
++      "version": "0.2.0",
++      "resolved": "https://registry.npmjs.org/routes/-/routes-0.2.0.tgz",
++      "integrity": "sha512-Poi9njx/cuUbH75aWW6ImiQGfmZhAK7FFUUfraLIOjRgPw9N7H88L9IsYTxXWxFv9YuPJJr/rtLSzVRh72kCww==",
++      "engines": {
++        "node": "*"
++      }
++    },
+     "node_modules/run-parallel": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz",
+@@ -19770,6 +19904,11 @@
+       "resolved": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz",
+       "integrity": "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="
+     },
++    "@remix-run/router": {
++      "version": "1.0.2",
++      "resolved": "https://registry.npmjs.org/@remix-run/router/-/router-1.0.2.tgz",
++      "integrity": "sha512-GRSOFhJzjGN+d4sKHTMSvNeUPoZiDHWmRnXfzaxrqe7dE/Nzlc8BiMSJdLDESZlndM7jIUrZ/F4yWqVYlI0rwQ=="
++    },
+     "@rollup/plugin-babel": {
+       "version": "5.3.1",
+       "resolved": "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz",
+@@ -22405,6 +22544,11 @@
+         "entities": "^2.0.0"
+       }
+     },
++    "dom-walk": {
++      "version": "0.1.2",
++      "resolved": "https://registry.npmjs.org/dom-walk/-/dom-walk-0.1.2.tgz",
++      "integrity": "sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w=="
++    },
+     "domelementtype": {
+       "version": "2.3.0",
+       "resolved": "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz",
+@@ -23437,6 +23581,11 @@
+       "resolved": "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz",
+       "integrity": "sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA=="
+     },
++    "foreach": {
++      "version": "2.0.6",
++      "resolved": "https://registry.npmjs.org/foreach/-/foreach-2.0.6.tgz",
++      "integrity": "sha512-k6GAGDyqLe9JaebCsFCoudPPWfihKu8pylYXRlqP1J7ms39iPoTtk2fviNglIeQEwdh0bQeKJ01ZPyuyQvKzwg=="
++    },
+     "fork-ts-checker-webpack-plugin": {
+       "version": "6.5.2",
+       "resolved": "https://registry.npmjs.org/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.5.2.tgz",
+@@ -23682,6 +23831,15 @@
+       "resolved": "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz",
+       "integrity": "sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw=="
+     },
++    "global": {
++      "version": "4.4.0",
++      "resolved": "https://registry.npmjs.org/global/-/global-4.4.0.tgz",
++      "integrity": "sha512-wv/LAoHdRE3BeTGz53FAamhGlPLhlssK45usmGFThIi4XqnBmjKQ16u+RNbP7WvigRZDxUsM0J3gcQ5yicaL0w==",
++      "requires": {
++        "min-document": "^2.19.0",
++        "process": "^0.11.10"
++      }
++    },
+     "global-modules": {
+       "version": "2.0.0",
+       "resolved": "https://registry.npmjs.org/global-modules/-/global-modules-2.0.0.tgz",
+@@ -23795,6 +23953,37 @@
+         "has-symbols": "^1.0.2"
+       }
+     },
++    "hash-router": {
++      "version": "0.4.0",
++      "resolved": "https://registry.npmjs.org/hash-router/-/hash-router-0.4.0.tgz",
++      "integrity": "sha512-TWIwsxInId58YR3HeGhwIK/APKc5immhVCc2aPD8j7o368exRmKulcwaF1w6Yd6cnMIBDS7LCz4imfaIeYKTew==",
++      "requires": {
++        "global": "^4.2.1",
++        "routes": "~0.2.0",
++        "xtend": "~2.0.6"
++      },
++      "dependencies": {
++        "object-keys": {
++          "version": "0.2.0",
++          "resolved": "https://registry.npmjs.org/object-keys/-/object-keys-0.2.0.tgz",
++          "integrity": "sha512-XODjdR2pBh/1qrjPcbSeSgEtKbYo7LqYNq64/TPuCf7j9SfDD3i21yatKoIy39yIWNvVM59iutfQQpCv1RfFzA==",
++          "requires": {
++            "foreach": "~2.0.1",
++            "indexof": "~0.0.1",
++            "is": "~0.2.6"
++          }
++        },
++        "xtend": {
++          "version": "2.0.6",
++          "resolved": "https://registry.npmjs.org/xtend/-/xtend-2.0.6.tgz",
++          "integrity": "sha512-fOZg4ECOlrMl+A6Msr7EIFcON1L26mb4NY5rurSkOex/TWhazOrg6eXD/B0XkuiYcYhQDWLXzQxLMVJ7LXwokg==",
++          "requires": {
++            "is-object": "~0.1.2",
++            "object-keys": "~0.2.0"
++          }
++        }
++      }
++    },
+     "he": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/he/-/he-1.2.0.tgz",
+@@ -24050,6 +24239,11 @@
+       "resolved": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
+       "integrity": "sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg=="
+     },
++    "indexof": {
++      "version": "0.0.1",
++      "resolved": "https://registry.npmjs.org/indexof/-/indexof-0.0.1.tgz",
++      "integrity": "sha512-i0G7hLJ1z0DE8dsqJa2rycj9dBmNKgXBvotXtZYXakU9oivfB9Uj2ZBC27qqef2U58/ZLwalxa1X/RDCdkHtVg=="
++    },
+     "inflight": {
+       "version": "1.0.6",
+       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+@@ -24084,6 +24278,11 @@
+       "resolved": "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.0.1.tgz",
+       "integrity": "sha512-1qTgH9NG+IIJ4yfKs2e6Pp1bZg8wbDbKHT21HrLIeYBTRLgMYKnMTPAuI3Lcs61nfx5h1xlXnbJtH1kX5/d/ng=="
+     },
++    "is": {
++      "version": "0.2.7",
++      "resolved": "https://registry.npmjs.org/is/-/is-0.2.7.tgz",
++      "integrity": "sha512-ajQCouIvkcSnl2iRdK70Jug9mohIHVX9uKpoWnl115ov0R5mzBvRrXxrnHbsA+8AdwCwc/sfw7HXmd4I5EJBdQ=="
++    },
+     "is-arrayish": {
+       "version": "0.2.1",
+       "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
+@@ -24191,6 +24390,11 @@
+       "resolved": "https://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz",
+       "integrity": "sha512-l4RyHgRqGN4Y3+9JHVrNqO+tN0rV5My76uW5/nuO4K1b6vw5G8d/cmFjP9tRfEsdhZNt0IFdZuK/c2Vr4Nb+Qg=="
+     },
++    "is-object": {
++      "version": "0.1.2",
++      "resolved": "https://registry.npmjs.org/is-object/-/is-object-0.1.2.tgz",
++      "integrity": "sha512-GkfZZlIZtpkFrqyAXPQSRBMsaHAw+CgoKe2HXAkjd/sfoI9+hS8PT4wg2rJxdQyUKr7N2vHJbg7/jQtE5l5vBQ=="
++    },
+     "is-plain-obj": {
+       "version": "3.0.0",
+       "resolved": "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-3.0.0.tgz",
+@@ -26123,6 +26327,14 @@
+       "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz",
+       "integrity": "sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg=="
+     },
++    "min-document": {
++      "version": "2.19.0",
++      "resolved": "https://registry.npmjs.org/min-document/-/min-document-2.19.0.tgz",
++      "integrity": "sha512-9Wy1B3m3f66bPPmU5hdA4DR4PB2OfDU/+GS3yAB7IQozE3tqXaVv2zOjgla7MEGSRv95+ILmOuvhLkOK6wJtCQ==",
++      "requires": {
++        "dom-walk": "^0.1.0"
++      }
++    },
+     "min-indent": {
+       "version": "1.0.1",
+       "resolved": "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz",
+@@ -27343,6 +27555,11 @@
+         }
+       }
+     },
++    "process": {
++      "version": "0.11.10",
++      "resolved": "https://registry.npmjs.org/process/-/process-0.11.10.tgz",
++      "integrity": "sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A=="
++    },
+     "process-nextick-args": {
+       "version": "2.0.1",
+       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+@@ -27614,6 +27831,23 @@
+       "resolved": "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz",
+       "integrity": "sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A=="
+     },
++    "react-router": {
++      "version": "6.4.2",
++      "resolved": "https://registry.npmjs.org/react-router/-/react-router-6.4.2.tgz",
++      "integrity": "sha512-Rb0BAX9KHhVzT1OKhMvCDMw776aTYM0DtkxqUBP8dNBom3mPXlfNs76JNGK8wKJ1IZEY1+WGj+cvZxHVk/GiKw==",
++      "requires": {
++        "@remix-run/router": "1.0.2"
++      }
++    },
++    "react-router-dom": {
++      "version": "6.4.2",
++      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.4.2.tgz",
++      "integrity": "sha512-yM1kjoTkpfjgczPrcyWrp+OuQMyB1WleICiiGfstnQYo/S8hPEEnVjr/RdmlH6yKK4Tnj1UGXFSa7uwAtmDoLQ==",
++      "requires": {
++        "@remix-run/router": "1.0.2",
++        "react-router": "6.4.2"
++      }
++    },
+     "react-scripts": {
+       "version": "5.0.1",
+       "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-5.0.1.tgz",
+@@ -27975,6 +28209,11 @@
+         }
+       }
+     },
++    "routes": {
++      "version": "0.2.0",
++      "resolved": "https://registry.npmjs.org/routes/-/routes-0.2.0.tgz",
++      "integrity": "sha512-Poi9njx/cuUbH75aWW6ImiQGfmZhAK7FFUUfraLIOjRgPw9N7H88L9IsYTxXWxFv9YuPJJr/rtLSzVRh72kCww=="
++    },
+     "run-parallel": {
+       "version": "1.2.0",
+       "resolved": "https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz",
+Index: frontend-danger-zone/src/routes/routes.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend-danger-zone/src/routes/routes.js b/frontend-danger-zone/src/routes/routes.js
+new file mode 100644
+--- /dev/null	(date 1665046085047)
++++ b/frontend-danger-zone/src/routes/routes.js	(date 1665046085047)
+@@ -0,0 +1,9 @@
++import {LandingPage} from "../container/landingPage/LandingPage";
++
++export const routes = [
++  {
++    path: "/",
++    element: <LandingPage />,
++    exact: true,
++  }
++]
+\ No newline at end of file
+Index: frontend-danger-zone/src/routes/route.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/frontend-danger-zone/src/routes/route.js b/frontend-danger-zone/src/routes/route.js
+new file mode 100644
+--- /dev/null	(date 1659514122639)
++++ b/frontend-danger-zone/src/routes/route.js	(date 1659514122639)
+@@ -0,0 +1,32 @@
++//--------Employee view routes-----------
++
++//Wizard
++export const START_PAGE_WIZARD_ROUTE = '/';
++
++//Main page Employee
++export const MAIN_PAGE_EMPLOYEE_ROUTE = '/mainPageEmployee/*';
++export const MY_PROFILE_ROUTE = '/my-profile';
++export const SEARCH_RESULTS_ROUTE = '/search-results';
++export const PINNED_LIST_ROUTE = '/pinned-list';
++export const APPLICATION_ROUTE = '/application';
++
++export const JOB_DETAILS_ROUTE = '/job-details';
++
++export const APPLICATION_LETTER_ROUTE = '/application-letter';
++export const FEEDBACK_ROUTE = '/feedback';
++export const CREATE_SEARCH_PROFILE_ROUTE = '/create-search-profile';
++export const EDIT_MY_QUALIFICATIONS_ROUTE = '/bearbeiten';
++export const EDIT_SEARCH_PROFILE_ROUTE = '/edit-search-profile';
++
++//---------Employer view routes-------------
++
++export const BUSINESS_PROFILE_ROUTE = '/';
++export const SEARCH_PROFILES_ROUTE = '/suchauftraege';
++export const PINNED_SEARCH_RESULTS_ROUTE = '/merkliste';
++export const APPLICATIONS_ROUTE = '/bewerbungen';
++
++export const EDIT_PHARMACY_DETAILS_ROUTE = '/apothekenmerkmale-bearbeiten';
++export const CREATE_SEARCH_ORDER_ROUTE = '/neuen-suchauftrag-erstellen';
++export const PERSON_PROFILE_DETAILS_ROUTE = '/details';
++export const INVITATION_PAGE_ROUTE = '/einladung-senden';
++export const REJECTION_PAGE_ROUTE = '/absage-senden';

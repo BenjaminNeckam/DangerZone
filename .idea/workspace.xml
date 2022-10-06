@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a103069e-2061-4817-b853-61a9b591a112" name="Changes" comment="added picture">
+      <change afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/Drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/container/landingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/container/landingPage/LandingPage.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FiT1ue6jKwSBld7k7EppFWPTPz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/ljanssen/projects/learning/PSD-scrum-training/DangerZone/frontend-danger-zone/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-danger-zone/src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
+      <option name="passParentEnvironments" value="true" />
+      <option name="workspaceLocation" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a103069e-2061-4817-b853-61a9b591a112" name="Changes" comment="" />
+      <created>1664973693699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1664973693699</updated>
+      <workItem from="1664973694910" duration="6327000" />
+    </task>
+    <task id="LOCAL-00001" summary="added Material UI">
+      <created>1664973861339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664973861339</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added LandingPage.js">
+      <created>1664975333519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664975333519</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added LandingPage img">
+      <created>1664975355029</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664975355029</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added button">
+      <created>1664975689762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664975689762</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added styling">
+      <created>1664975801096</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664975801096</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added styling/wording">
+      <created>1664975923224</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664975923224</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added styling/wording">
+      <created>1665045535578</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665045535578</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added picture">
+      <created>1665046135810</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665046135810</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added Material UI" />
+    <MESSAGE value="added LandingPage.js" />
+    <MESSAGE value="added LandingPage img" />
+    <MESSAGE value="added button" />
+    <MESSAGE value="added styling" />
+    <MESSAGE value="added styling/wording" />
+    <MESSAGE value="added picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="added picture" />
+  </component>
+</project>
