@@ -1,5 +1,4 @@
-{
-  "trips": [
+export const trips = [
     {
       "title": "Casino Royal",
       "subtitle": "Roulette des Todes.",
@@ -52,7 +51,7 @@
       "title": "Topfschlagen",
       "subtitle": "Einmal wieder Jung.",
       "description": "Werden Sie wieder zum Kind mit unserem Topfschlagen Spiel. Unter unserem speziell auf Splitter ausgelegten Töpfen befindet sich 1kg Nitroglycerin für den extra Spass. \nHinweis: Auf Gehörschutz achten!",
-      "image": "topfschlagen.jpg"
+      "image": "topfschlagen.png"
     },
     {
       "title": "Drachensteigen in der Gewitterzeit.",
@@ -61,4 +60,3 @@
       "image": "drachensteigen.jpg"
     }
   ]
-}
