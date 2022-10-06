@@ -1,7 +1,7 @@
 import React from "react";
 import {Grid, Typography} from "@mui/material";
 
-import dangerZone from "../../assets/explosion.jpeg";
+import dangerZone from "../../assets/danger-zone.png";
 import NavBar from "../../components/NavBar/NavBar";
 import Button from "@mui/material/Button";
 
