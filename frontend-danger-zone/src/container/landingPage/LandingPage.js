@@ -1,11 +1,13 @@
 import React from "react";
 import {Grid, Typography} from "@mui/material";
 
-import dangerZone from "../../assets/explosion.jpeg";
+import dangerZone from "../../assets/danger-zone.png";
 import NavBar from "../../components/NavBar/NavBar";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export function LandingPage () {
+    const navigate = useNavigate()
     return(
         <Grid container spacing={2}>
             <NavBar title="Danger Zone"/>
@@ -25,7 +27,7 @@ export function LandingPage () {
             </Grid>
             <Grid item xxs={3}/>
             <Grid item xxs={6}>
-                <Button variant="contained">
+                <Button variant="contained" onClick={() => navigate('/overview')}>
                     Find your adventures
                 </Button>
             </Grid>

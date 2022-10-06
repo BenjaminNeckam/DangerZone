@@ -26,7 +26,7 @@ export default function TemporaryDrawer({state, setState}) {
         },
         {
             title: "Adventure List",
-            link: "/list"
+            link: "/overview"
         }
     ]
 
