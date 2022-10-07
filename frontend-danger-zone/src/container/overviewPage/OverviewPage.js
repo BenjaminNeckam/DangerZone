@@ -7,7 +7,7 @@ import { trips } from "../../assets/trips";
 
 export function OverviewPage () {
     return(
-        <Grid container spacing={2}>
+        <Grid container spacing={2} >
             <NavBar title="Adventures"/>
             {trips.map(trip => (
                 <Grid item xxs={12} key={trip.title}>

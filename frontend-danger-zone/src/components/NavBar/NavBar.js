@@ -23,7 +23,7 @@ export default function NavBar({title = "Danger Zone"}) {
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        sx={{ mr: 2 }}
+                        sx={{ mr: 2, paddingLeft: "1.5rem" }}
                     >
                         <MenuIcon onClick={() => {
                             setState({left: true,})
