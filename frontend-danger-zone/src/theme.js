@@ -1,6 +1,5 @@
 // // A custom theme for this app
 import { createTheme } from '@mui/material';
-import regular from "./assets/Roboto/Roboto-Regular.ttf";
 
 let theme = createTheme({
   palette: {
@@ -62,9 +61,9 @@ let theme = createTheme({
   },
 
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: "Open Sans",
     body1: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '20px',
@@ -72,7 +71,7 @@ let theme = createTheme({
       letterSpacing: '0.15px',
     },
     body1SemiBold: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 600,
       fontSize: '14px',
@@ -80,7 +79,7 @@ let theme = createTheme({
       letterSpacing: '0.15px',
     },
     body2: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '20px',
@@ -88,7 +87,7 @@ let theme = createTheme({
       letterSpacing: '0.15px',
     },
     subtitle1: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '18px',
@@ -97,7 +96,7 @@ let theme = createTheme({
       color: '#373737',
     },
     subtitle2: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '20px',
@@ -105,7 +104,7 @@ let theme = createTheme({
       letterSpacing: '0.1px',
     },
     subtitle2SemiBold: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 600,
       fontSize: '20px',
@@ -113,7 +112,7 @@ let theme = createTheme({
       letterSpacing: '0.1px',
     },
     caption: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '13px',
@@ -123,7 +122,7 @@ let theme = createTheme({
       opacity: 0.8,
     },
     overline: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 400,
       fontSize: '12px',
@@ -132,7 +131,7 @@ let theme = createTheme({
       textTransform: 'uppercase',
     },
     button: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '18px',
@@ -141,7 +140,7 @@ let theme = createTheme({
       color: '#4CAF50',
     },
     buttonMedium: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontSize: '16px',
       color: '#FFFFFF',
       lineHeight: '19px',
@@ -149,24 +148,24 @@ let theme = createTheme({
     },
     h1: {
       fontSize: '24px',
-      fontFamily: "Roboto",
+      fontFamily: "Open Sans",
     },
     h2: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '36px',
       lineHeight: '120%',
     },
     h3: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '32px',
       lineHeight: '150%',
     },
     h4: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 700,
       fontSize: '20px',
@@ -175,7 +174,7 @@ let theme = createTheme({
       textTransform: 'uppercase',
     },
     h5: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: '600 !important',
       fontSize: '20px',
@@ -183,7 +182,7 @@ let theme = createTheme({
       letterSpacing: '0.15px',
     },
     h6: {
-      fontFamily: 'Roboto',
+      fontFamily: 'Open Sans',
       fontStyle: 'normal',
       fontWeight: 500,
       fontSize: '36px',
