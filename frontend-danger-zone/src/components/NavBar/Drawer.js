@@ -8,6 +8,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import {useNavigate} from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import HelpCenterIcon from '@mui/icons-material/HelpCenter';
 
 export default function TemporaryDrawer({state, setState}) {
 
@@ -45,12 +48,16 @@ export default function TemporaryDrawer({state, setState}) {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {links.map((item) => (
-                    <ListItem key={item.title} disablePadding>
+                {links.map((item, index) => (
+                    <>
+                    <ListItem key={item.title}>
+                        {index === 0 ? <HomeIcon/> : index === 1 ? <FormatListBulletedIcon/> : <HelpCenterIcon/>}
                         <ListItemButton onClick={() => {navigate(item.link)}}>
                             <ListItemText primary={item.title} />
                         </ListItemButton>
                     </ListItem>
+                        <Divider />
+                    </>
                 ))}
             </List>
         </Box>

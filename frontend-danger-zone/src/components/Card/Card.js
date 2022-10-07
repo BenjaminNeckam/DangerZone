@@ -13,7 +13,7 @@ export default function ActionAreaCard({image, title, subtitle, description}) {
     const navigate = useNavigate()
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, marginRight: "5%",marginLeft: "5%"}}>
             <CardActionArea>
                 <CardMedia
                     component="img"
