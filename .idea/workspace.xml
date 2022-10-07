@@ -4,17 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a103069e-2061-4817-b853-61a9b591a112" name="Changes" comment="added picture">
-      <change afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/Drawer.js" afterDir="false" />
+    <list default="true" id="a103069e-2061-4817-b853-61a9b591a112" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend-danger-zone/src/container/supportPage/supportPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/container/landingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/container/landingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/Card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/Drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/components/NavBar/Drawer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-danger-zone/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-danger-zone/src/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,22 +35,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/ljanssen/projects/learning/PSD-scrum-training/DangerZone/frontend-danger-zone/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ljanssen/projects/learning/PSD-scrum-training/DangerZone/frontend-danger-zone/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend-danger-zone/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend-danger-zone/src/assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +141,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
