@@ -11,7 +11,7 @@ export function OverviewPage () {
             <NavBar title="Adventures"/>
             {trips.map(trip => (
                 <Grid item xxs={12} key={trip.title}>
-                    <ActionAreaCard image={"/images/" + trip.image} title={trip.title} description={trip.description} subtitle={trip.subtitle}>
+                    <ActionAreaCard image={"/images/" + trip.image} title={trip.title} description={trip.description} subtitle={trip.subtitle} dangerousness={trip.dangerousness}>
                     </ActionAreaCard>
                 </Grid>
             ))}
