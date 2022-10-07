@@ -14,8 +14,11 @@ export default function ActionAreaCard({image, title, subtitle, description, dan
 
     return (
         <Card sx={{ maxWidth: 345, marginRight: "5%",marginLeft: "5%"}}>
-            <CardActionArea>
-                <CardMedia
+            <CardActionArea onClick={() => navigate('/details', {
+                state: { image: image, title: title, subtitle: subtitle, description: description, dangerousness: dangerousness  },
+            })}>
+
+            <CardMedia
                     component="img"
                     height="140"
                     image={image}
