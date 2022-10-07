@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 
 //https://mui.com/material-ui/react-card/
 
-export default function ActionAreaCard({image, title, subtitle, description}) {
+export default function ActionAreaCard({image, title, subtitle, description, dangerousness}) {
     const navigate = useNavigate()
 
     return (
@@ -33,7 +33,7 @@ export default function ActionAreaCard({image, title, subtitle, description}) {
                 </CardContent>
                 <CardActions>
                     <Button size="small" onClick={() => navigate('/details', {
-                        state: { image: image, title: title, subtitle: subtitle, description: description  },
+                        state: { image: image, title: title, subtitle: subtitle, description: description, dangerousness: dangerousness  },
                     })}>Let's get dangerous</Button>
                 </CardActions>
             </CardActionArea>
